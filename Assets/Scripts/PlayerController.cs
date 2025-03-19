@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float torque = 1;
+    [SerializeField] float timeDelays = 2f;
+    [SerializeField] ParticleSystem particleHit;
     Rigidbody2D rb;
     void Start()
     {
@@ -20,7 +23,14 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.tag == "Ground")
         {
+            particleHit.Play();
             Debug.Log("Ouch!");
-        }    
+            Invoke("LoadScene", timeDelays);
+        }
+    }
+
+    void LoadScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }
