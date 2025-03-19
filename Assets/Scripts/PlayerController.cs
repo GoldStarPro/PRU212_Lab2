@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        se = FindObjectOfType<SurfaceEffector2D>();
+        se = FindFirstObjectByType<SurfaceEffector2D>();
     }
     void Update()
     {
