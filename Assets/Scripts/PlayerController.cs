@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float normalSpeed = 15f;
 
     [SerializeField] ParticleSystem Dust;
+
+    bool check = true;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,8 +22,16 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        Rotate();
-        Boost();
+        if (check)
+        {
+            Rotate();
+            Boost();
+        }
+    }
+
+    void Stopmove()
+    {
+        check = false;
     }
 
     void Boost()
@@ -43,7 +53,9 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.tag == "Ground")
         {
+            se.speed = 0f;
             particleHit.Play();
+            Stopmove();
             Debug.Log("Ouch!");
             Invoke("LoadScene", timeDelays);
         }
