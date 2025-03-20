@@ -12,6 +12,11 @@ public class Flag : MonoBehaviour
         {
             particleFlag.Play();
             Debug.Log("Nuh uh");
+
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayVictorySFX();
+            }
             Invoke("LoadScene", timeDelays);
         }
     }

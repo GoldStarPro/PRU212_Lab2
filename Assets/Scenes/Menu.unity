@@ -438,18 +438,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgMusicSource: {fileID: 0}
   sfxSource: {fileID: 0}
-  menuBGMusic: {fileID: 0}
-  gameBGMusic: {fileID: 0}
-  SkiingSFX: {fileID: 0}
-  SnowflakeSFX: {fileID: 0}
-  HitSFX: {fileID: 0}
-  VictorySFX: {fileID: 0}
-  menuBGMusicVolume: 1
-  gameBGMusicVolume: 1
+  menuBGMusic: {fileID: 8300000, guid: 3a888641f44226b4bb7701794d97baec, type: 3}
+  gameBGMusic: {fileID: 8300000, guid: 01513eea96ad7a34582f30ba67927e40, type: 3}
+  SkiingSFX: {fileID: 8300000, guid: 7862ecccd0915e24fa780957efe5ddde, type: 3}
+  SnowflakeSFX: {fileID: 8300000, guid: 388eb35211b249e419a01e3c664b3139, type: 3}
+  HitSFX: {fileID: 8300000, guid: 4cb7362192e402c42a759abeed960171, type: 3}
+  VictorySFX: {fileID: 8300000, guid: 603cb64ecdd7beb47b3aa2f2ef4f78df, type: 3}
+  menuBGMusicVolume: 0.5
+  gameBGMusicVolume: 0.5
   SkiingSFXVolume: 1
-  SnowflakeSFXVolume: 1
-  HitSFXVolume: 1
-  VictorySFXVolume: 1
+  SnowflakeSFXVolume: 0.2
+  HitSFXVolume: 0.5
+  VictorySFXVolume: 0.5
 --- !u!1 &849642053
 GameObject:
   m_ObjectHideFlags: 0

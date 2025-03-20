@@ -35,6 +35,10 @@ public class GameUIManager : MonoBehaviour
 
     public void BackToMenu()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopBGMusic();
+        }
         Time.timeScale = 1f;
         GameManager.Instance.ResetScore();
         SceneManager.LoadScene("Menu");

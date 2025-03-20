@@ -15,7 +15,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip HitSFX;
     [SerializeField] private AudioClip VictorySFX;
 
-    // Thêm các biến âm lượng cho từng file âm thanh (giá trị từ 0 đến 1)
     [SerializeField, Range(0f, 1f)] private float menuBGMusicVolume = 1f;
     [SerializeField, Range(0f, 1f)] private float gameBGMusicVolume = 1f;
     [SerializeField, Range(0f, 1f)] private float SkiingSFXVolume = 1f;
@@ -59,13 +58,10 @@ public class AudioManager : MonoBehaviour
     {
         if (bgMusicSource != null && menuBGMusic != null)
         {
-            if (bgMusicSource.clip != menuBGMusic)
-            {
-                bgMusicSource.clip = menuBGMusic;
-                bgMusicSource.volume = menuBGMusicVolume; // Áp dụng âm lượng riêng
-                bgMusicSource.Play();
-                Debug.Log("Playing Menu BG Music with volume: " + menuBGMusicVolume);
-            }
+            bgMusicSource.clip = menuBGMusic;
+            bgMusicSource.volume = menuBGMusicVolume; // Áp dụng âm lượng riêng
+            bgMusicSource.Play();
+            Debug.Log("Playing Menu BG Music with volume: " + menuBGMusicVolume);
         }
         else
         {

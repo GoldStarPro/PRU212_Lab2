@@ -131,6 +131,11 @@ public class PlayerController : MonoBehaviour
             Stopmove();
             Debug.Log("Ouch!");
             Invoke("LoadScene", timeDelays);
+
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayHitSFX();
+            }
         }
         else if (collision.CompareTag("Snowflake"))
         {
@@ -138,6 +143,10 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             GameManager.Instance.AddScore(100);
 
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySnowflakeSFX();
+            }
             Invoke("SnowflakeStop", 0.5f);
         }
     }
@@ -155,6 +164,11 @@ public class PlayerController : MonoBehaviour
             totalRotation = 0f;
             flipCount = 0;
             previousRotation = rb.rotation;
+
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySkiingSFX();
+            }
         }
     }
 
