@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float normalSpeed = 15f;
 
     [SerializeField] ParticleSystem Dust;
+    [SerializeField] ParticleSystem Snowflake;
 
     bool check = true;
     bool isGrounded = true;
@@ -134,8 +135,11 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.CompareTag("Snowflake"))
         {
+            Snowflake.Play();
             Destroy(collision.gameObject);
             GameManager.Instance.AddScore(100);
+
+            Invoke("SnowflakeStop", 0.5f);
         }
     }
 
@@ -168,6 +172,11 @@ public class PlayerController : MonoBehaviour
     private void UpdateAnimation()
     {
         animator.SetBool("IsGrounded", isGrounded);
+    }
+
+    void SnowflakeStop()
+    {
+        Snowflake.Stop();
     }
 
     void LoadScene()
