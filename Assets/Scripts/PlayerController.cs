@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         se = FindFirstObjectByType<SurfaceEffector2D>();
-        
         previousRotation = rb.rotation;
         totalRotation = 0f;
         flipCount = 0;
