@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Flag : MonoBehaviour
 {
+    [SerializeField] private GameUIManager gameUIManager;
     [SerializeField] float timeDelays = 2f;
     [SerializeField] ParticleSystem particleFlag;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,6 +18,6 @@ public class Flag : MonoBehaviour
     
     void LoadScene()
     {
-        SceneManager.LoadScene(0);
+        gameUIManager.ShowGameOver();
     }
 }
