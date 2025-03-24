@@ -194,7 +194,7 @@ public class PlayerController : MonoBehaviour
 
     void LoadScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         GameManager.Instance.ResetScore();
     }
 }

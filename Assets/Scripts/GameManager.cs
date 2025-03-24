@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     {
         if(tempCooldown <= 0)
         {
-            AddScore(10);
+            AddScore(20);
             tempCooldown = timeCooldown;
         }
         tempCooldown -= Time.deltaTime;

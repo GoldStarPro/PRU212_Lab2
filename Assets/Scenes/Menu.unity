@@ -444,12 +444,12 @@ MonoBehaviour:
   SnowflakeSFX: {fileID: 8300000, guid: 388eb35211b249e419a01e3c664b3139, type: 3}
   HitSFX: {fileID: 8300000, guid: 4cb7362192e402c42a759abeed960171, type: 3}
   VictorySFX: {fileID: 8300000, guid: 603cb64ecdd7beb47b3aa2f2ef4f78df, type: 3}
-  menuBGMusicVolume: 0.5
-  gameBGMusicVolume: 0.5
+  menuBGMusicVolume: 1
+  gameBGMusicVolume: 1
   SkiingSFXVolume: 1
-  SnowflakeSFXVolume: 0.2
+  SnowflakeSFXVolume: 0.05
   HitSFXVolume: 0.5
-  VictorySFXVolume: 0.5
+  VictorySFXVolume: 0.8
 --- !u!1 &849642053
 GameObject:
   m_ObjectHideFlags: 0

@@ -100,11 +100,11 @@ public class AudioManager : MonoBehaviour
         if (sfxSource != null && SkiingSFX != null)
         {
             sfxSource.PlayOneShot(SkiingSFX, SkiingSFXVolume);
-            Debug.Log("Playing Power Up SFX with volume: " + SkiingSFXVolume);
+            Debug.Log("Playing Dust SFX with volume: " + SkiingSFXVolume);
         }
         else
         {
-            Debug.LogError("Cannot play Power Up SFX: Source or clip is null.");
+            Debug.LogError("Cannot play Dust SFX: Source or clip is null.");
         }
     }
 
